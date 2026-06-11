@@ -1,0 +1,39 @@
+{
+  "name": "skill-hub",
+  "owner": { "name": "sametbrr", "email": "sametbrr@gmail.com" },
+  "metadata": {
+    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and README tooling"
+  },
+  "plugins": [
+    {
+      "name": "llm-wiki-manager",
+      "source": { "source": "github", "repo": "sametbrr/llm-wiki-manager" },
+      "description": "Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, and lint your markdown knowledge base"
+    },
+    {
+      "name": "look-again",
+      "source": { "source": "github", "repo": "sametbrr/look-again" },
+      "description": "Save conversation checkpoints as markdown files and resume them later with full context"
+    },
+    {
+      "name": "notebooklm",
+      "source": { "source": "github", "repo": "sametbrr/notebooklm" },
+      "description": "Full programmatic access to Google NotebookLM: notebooks, sources, podcasts, videos, quizzes, flashcards and more"
+    },
+    {
+      "name": "project-radar",
+      "source": { "source": "github", "repo": "sametbrr/project-radar" },
+      "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist"
+    },
+    {
+      "name": "prompt-architect",
+      "source": { "source": "github", "repo": "sametbrr/prompt-architect" },
+      "description": "Turns any rough request into a structured, domain-aware expert prompt with an 8-gate quality review"
+    },
+    {
+      "name": "readme-standard",
+      "source": { "source": "github", "repo": "sametbrr/readme-standard" },
+      "description": "Enforces a consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes"
+    }
+  ]
+}
