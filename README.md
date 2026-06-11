@@ -1,4 +1,3 @@
-[![GitHub release](https://img.shields.io/github/v/release/sametbrr/skill-hub?display_name=tag&sort=semver)](https://github.com/sametbrr/skill-hub/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # skill-hub
@@ -31,12 +30,12 @@ No further configuration is needed for most plugins.
 
 | Plugin | What it does |
 |---|---|
-| [llm-wiki-manager](llm-wiki-manager/) | Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, lint |
-| [look-again](look-again/) | Save conversation checkpoints as markdown files and resume with full context |
-| [notebooklm](notebooklm/) | Full programmatic access to Google NotebookLM: notebooks, podcasts, quizzes and more |
-| [project-radar](project-radar/) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
-| [prompt-architect](prompt-architect/) | Turn any rough request into a structured, domain-aware expert prompt with an 8-gate review |
-| [readme-standard](readme-standard/) | Enforce consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes |
+| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, lint |
+| [look-again](https://github.com/sametbrr/look-again) | Save conversation checkpoints as markdown files and resume with full context |
+| [notebooklm](https://github.com/sametbrr/notebooklm) | Full programmatic access to Google NotebookLM: notebooks, podcasts, quizzes and more |
+| [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware expert prompt with an 8-gate review |
+| [readme-standard](https://github.com/sametbrr/readme-standard) | Enforce consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes |
 
 ---
 
@@ -49,7 +48,14 @@ No further configuration is needed for most plugins.
 
 ## Installation
 
-Each plugin is an independent GitHub repository. Install individually:
+**Option 1 — Marketplace (recommended):** Register the hub once, then install any plugin by name.
+
+```bash
+claude plugin marketplace add sametbrr/skill-hub
+claude plugin install llm-wiki-manager@sametbrr/skill-hub
+```
+
+**Option 2 — Individual install:** Install any plugin directly from its own repository.
 
 ```bash
 claude plugin install github:sametbrr/llm-wiki-manager

@@ -1,4 +1,3 @@
-[![GitHub release](https://img.shields.io/github/v/release/sametbrr/skill-hub?display_name=tag&sort=semver)](https://github.com/sametbrr/skill-hub/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # skill-hub
@@ -31,12 +30,12 @@ Ardından Claude Code içinden çağır:
 
 | Eklenti | Ne yapar |
 |---|---|
-| [llm-wiki-manager](llm-wiki-manager/) | Kişisel LLM wiki yönetimi: kaynak alma, çapraz referans, sorgulama, lint |
-| [look-again](look-again/) | Konuşma kontrol noktalarını markdown olarak kaydet ve tam bağlamla devam et |
-| [notebooklm](notebooklm/) | Google NotebookLM'e tam programatik erişim: not defterleri, podcast, quiz ve daha fazlası |
-| [project-radar](project-radar/) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
-| [prompt-architect](prompt-architect/) | Her ham isteği 8 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
-| [readme-standard](readme-standard/) | Tutarlı README.md + README.tr.md yapısını zorla: oluştur, denetle, düzelt ve TR senkronize et |
+| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Kişisel LLM wiki yönetimi: kaynak alma, çapraz referans, sorgulama, lint |
+| [look-again](https://github.com/sametbrr/look-again) | Konuşma kontrol noktalarını markdown olarak kaydet ve tam bağlamla devam et |
+| [notebooklm](https://github.com/sametbrr/notebooklm) | Google NotebookLM'e tam programatik erişim: not defterleri, podcast, quiz ve daha fazlası |
+| [project-radar](https://github.com/sametbrr/project-radar) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği 8 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
+| [readme-standard](https://github.com/sametbrr/readme-standard) | Tutarlı README.md + README.tr.md yapısını zorla: oluştur, denetle, düzelt ve TR senkronize et |
 
 ---
 
@@ -49,7 +48,14 @@ Ardından Claude Code içinden çağır:
 
 ## Kurulum
 
-Her eklenti bağımsız bir GitHub deposudur. Ayrı ayrı yükle:
+**Seçenek 1 — Marketplace (önerilen):** Hub'ı bir kez kaydet, ardından istediğin eklentiyi adıyla yükle.
+
+```bash
+claude plugin marketplace add sametbrr/skill-hub
+claude plugin install llm-wiki-manager@sametbrr/skill-hub
+```
+
+**Seçenek 2 — Tek tek kurulum:** Her eklentiyi doğrudan kendi deposundan yükle.
 
 ```bash
 claude plugin install github:sametbrr/llm-wiki-manager
