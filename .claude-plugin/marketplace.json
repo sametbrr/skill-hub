@@ -7,32 +7,32 @@
   "plugins": [
     {
       "name": "llm-wiki-manager",
-      "source": { "source": "github", "repo": "sametbrr/llm-wiki-manager" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/llm-wiki-manager.git" },
       "description": "Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, and lint your markdown knowledge base"
     },
     {
       "name": "look-again",
-      "source": { "source": "github", "repo": "sametbrr/look-again" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/look-again.git" },
       "description": "Save conversation checkpoints as markdown files and resume them later with full context"
     },
     {
       "name": "notebooklm",
-      "source": { "source": "github", "repo": "sametbrr/notebooklm" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/notebooklm.git" },
       "description": "Full programmatic access to Google NotebookLM: notebooks, sources, podcasts, videos, quizzes, flashcards and more"
     },
     {
       "name": "project-radar",
-      "source": { "source": "github", "repo": "sametbrr/project-radar" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/project-radar.git" },
       "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist"
     },
     {
       "name": "prompt-architect",
-      "source": { "source": "github", "repo": "sametbrr/prompt-architect" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/prompt-architect.git" },
       "description": "Turns any rough request into a structured, domain-aware expert prompt with an 8-gate quality review"
     },
     {
       "name": "readme-standard",
-      "source": { "source": "github", "repo": "sametbrr/readme-standard" },
+      "source": { "source": "url", "url": "https://github.com/sametbrr/readme-standard.git" },
       "description": "Enforces a consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes"
     }
   ]
