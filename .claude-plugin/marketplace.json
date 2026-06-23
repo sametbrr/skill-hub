@@ -2,7 +2,7 @@
   "name": "skill-hub",
   "owner": { "name": "sametbrr", "email": "sametbrr@gmail.com" },
   "metadata": {
-    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and README tooling"
+    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and GitHub account management"
   },
   "plugins": [
     {
@@ -31,9 +31,9 @@
       "description": "Turns any rough request into a structured, domain-aware expert prompt with an 8-gate quality review"
     },
     {
-      "name": "readme-standard",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/readme-standard.git" },
-      "description": "Enforces a consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes"
+      "name": "github-manager",
+      "source": { "source": "url", "url": "https://github.com/sametbrr/github-manager.git" },
+      "description": "Audit and fix a GitHub account end-to-end — profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard)"
     }
   ]
 }

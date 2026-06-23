@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, NotebookLM otomasyonu, proje keşfi, prompt mühendisliği ve README araçları.
+Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, NotebookLM otomasyonu, proje keşfi, prompt mühendisliği ve GitHub hesap yönetimi.
 
 > 🇬🇧 For English see [README.md](README.md)
 
@@ -35,7 +35,7 @@ Ardından Claude Code içinden çağır:
 | [notebooklm](https://github.com/sametbrr/notebooklm) | Google NotebookLM'e tam programatik erişim: not defterleri, podcast, quiz ve daha fazlası |
 | [project-radar](https://github.com/sametbrr/project-radar) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
 | [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği 8 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
-| [readme-standard](https://github.com/sametbrr/readme-standard) | Tutarlı README.md + README.tr.md yapısını zorla: oluştur, denetle, düzelt ve TR senkronize et |
+| [github-manager](https://github.com/sametbrr/github-manager) | Bir GitHub hesabını uçtan uca denetle ve düzelt: profil alanları, profil README, repo açıklamaları, topics ve proje README'leri (readme-standard'ı içerir) |
 
 ---
 
@@ -63,7 +63,7 @@ claude plugin install github:sametbrr/look-again
 claude plugin install github:sametbrr/notebooklm
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
-claude plugin install github:sametbrr/readme-standard
+claude plugin install github:sametbrr/github-manager
 ```
 
 ---
@@ -79,7 +79,7 @@ Her eklenti, kurulumun ardından Claude Code tarafından otomatik olarak algıla
 | notebooklm | `/notebooklm` veya "X hakkında podcast oluştur" |
 | project-radar | `/project-radar` veya "radar çalıştır" |
 | prompt-architect | `/prompt-architect` veya "prompt yaz", "refine my prompt" |
-| readme-standard | `/readme-standard` |
+| github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
 
 ---
 
@@ -110,7 +110,7 @@ skill-hub/
 ├── notebooklm/           → Google NotebookLM otomasyonu
 ├── project-radar/        → GitHub trend radarı
 ├── prompt-architect/     → uzman prompt mühendisliği
-├── readme-standard/      → README standart uygulaması
+├── github-manager/       → GitHub hesap & repo yönetimi
 └── .claude-plugin/
     └── marketplace.json  → hub düzeyinde marketplace indeksi
 ```

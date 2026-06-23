@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill collection — wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and README tooling.
+Claude Code skill collection — wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and GitHub account management.
 
 > 🇹🇷 Türkçe için [README.tr.md](README.tr.md)
 
@@ -35,7 +35,7 @@ No further configuration is needed for most plugins.
 | [notebooklm](https://github.com/sametbrr/notebooklm) | Full programmatic access to Google NotebookLM: notebooks, podcasts, quizzes and more |
 | [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
 | [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware expert prompt with an 8-gate review |
-| [readme-standard](https://github.com/sametbrr/readme-standard) | Enforce consistent README.md + README.tr.md structure: create, audit, fix and TR-sync modes |
+| [github-manager](https://github.com/sametbrr/github-manager) | Audit and fix a GitHub account end-to-end: profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard) |
 
 ---
 
@@ -63,7 +63,7 @@ claude plugin install github:sametbrr/look-again
 claude plugin install github:sametbrr/notebooklm
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
-claude plugin install github:sametbrr/readme-standard
+claude plugin install github:sametbrr/github-manager
 ```
 
 ---
@@ -79,7 +79,7 @@ Each plugin registers a skill that Claude Code picks up automatically after inst
 | notebooklm | `/notebooklm` or "create a podcast about X" |
 | project-radar | `/project-radar` or "radar çalıştır" |
 | prompt-architect | `/prompt-architect` or "prompt yaz", "refine my prompt" |
-| readme-standard | `/readme-standard` |
+| github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
 
 ---
 
@@ -110,7 +110,7 @@ skill-hub/
 ├── notebooklm/           → Google NotebookLM automation
 ├── project-radar/        → GitHub trending radar
 ├── prompt-architect/     → expert prompt engineering
-├── readme-standard/      → README enforcement
+├── github-manager/       → GitHub account & repo management
 └── .claude-plugin/
     └── marketplace.json  → hub-level marketplace index
 ```
