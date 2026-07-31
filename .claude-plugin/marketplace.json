@@ -2,7 +2,7 @@
   "name": "skill-hub",
   "owner": { "name": "sametbrr", "email": "sametbrr@gmail.com" },
   "metadata": {
-    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, project discovery, prompt engineering and GitHub account management"
+    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, project discovery, prompt engineering, GitHub account management and encrypted secret sync"
   },
   "plugins": [
     {
@@ -29,6 +29,11 @@
       "name": "github-manager",
       "source": { "source": "url", "url": "https://github.com/sametbrr/github-manager.git" },
       "description": "Audit and fix a GitHub account end-to-end — profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard)"
+    },
+    {
+      "name": "crypt-sync",
+      "source": { "source": "url", "url": "https://github.com/sametbrr/crypt-sync.git" },
+      "description": "Keep .env and secret files encrypted in git, synced across machines via age — requires the crypt-sync CLI (npm install -g crypt-sync)"
     }
   ]
 }

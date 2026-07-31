@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, proje keşfi, prompt mühendisliği ve GitHub hesap yönetimi.
+Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, proje keşfi, prompt mühendisliği, GitHub hesap yönetimi ve şifreli secret senkronu.
 
 > 🇬🇧 For English see [README.md](README.md)
 
@@ -35,6 +35,7 @@ Ardından Claude Code içinden çağır:
 | [project-radar](https://github.com/sametbrr/project-radar) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
 | [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği modele duyarlı, 11 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
 | [github-manager](https://github.com/sametbrr/github-manager) | Bir GitHub hesabını uçtan uca denetle ve düzelt: profil alanları, profil README, repo açıklamaları, topics ve proje README'leri (readme-standard'ı içerir) |
+| [crypt-sync](https://github.com/sametbrr/crypt-sync) | `.env` ve gizli dosyaları age ile şifreli tut, git üzerinden makineler arası senkronize et — **`npm install -g crypt-sync` gerekir** |
 
 ---
 
@@ -42,6 +43,7 @@ Ardından Claude Code içinden çağır:
 
 - Claude Code CLI (en güncel sürüm)
 - Eklentiye özgü gereksinimler her eklentinin kendi README dosyasında listelenir
+- `crypt-sync` ek olarak CLI'sinin `PATH`'te olmasını ister: `npm install -g crypt-sync` (Node.js ≥ 16). Eklenti yalnızca skill; şifreleme motoru npm paketidir
 
 ---
 
@@ -62,6 +64,7 @@ claude plugin install github:sametbrr/look-again
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
 claude plugin install github:sametbrr/github-manager
+claude plugin install github:sametbrr/crypt-sync
 ```
 
 ---
@@ -77,6 +80,7 @@ Her eklenti, kurulumun ardından Claude Code tarafından otomatik olarak algıla
 | project-radar | `/project-radar` veya "radar çalıştır" |
 | prompt-architect | `/prompt-architect` veya "prompt yaz", "refine my prompt" |
 | github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
+| crypt-sync | `/crypt-sync` veya ".env şifrele", "secret sync", "secretları git'e şifreli koy" |
 
 ---
 
@@ -96,6 +100,8 @@ eklenti-adı/
 
 `SKILL.md` giriş noktasıdır — skill adını, açıklamasını ve Claude'un skill çağrıldığında izlediği talimatları tanımlar. `plugin.json` eklentiyi marketplace'e kaydeder.
 
+İki eklenti ek bileşen taşır: `github-manager` birden fazla skill'i `skills/` altında ve ayrıca `agents/` dizinini içerir; `crypt-sync` ise `skills/crypt-sync/SKILL.md` yanında bir `hooks/` kapısı kullanır — npm paketi kurulu değilken CLI çağrılarını bloklar.
+
 ---
 
 ## Proje Yapısı
@@ -107,6 +113,7 @@ skill-hub/
 ├── project-radar/        → GitHub trend radarı
 ├── prompt-architect/     → uzman prompt mühendisliği
 ├── github-manager/       → GitHub hesap & repo yönetimi
+├── crypt-sync/           → şifreli secret senkronu (aynı zamanda npm CLI)
 └── .claude-plugin/
     └── marketplace.json  → hub düzeyinde marketplace indeksi
 ```

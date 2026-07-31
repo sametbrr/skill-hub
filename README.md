@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill collection — wiki management, conversation checkpoints, project discovery, prompt engineering and GitHub account management.
+Claude Code skill collection — wiki management, conversation checkpoints, project discovery, prompt engineering, GitHub account management and encrypted secret sync.
 
 > 🇹🇷 Türkçe için [README.tr.md](README.tr.md)
 
@@ -35,6 +35,7 @@ No further configuration is needed for most plugins.
 | [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
 | [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware, model-aware expert prompt with an 11-gate review |
 | [github-manager](https://github.com/sametbrr/github-manager) | Audit and fix a GitHub account end-to-end: profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard) |
+| [crypt-sync](https://github.com/sametbrr/crypt-sync) | Keep `.env` and secret files encrypted in git, synced across machines via age — **needs `npm install -g crypt-sync`** |
 
 ---
 
@@ -42,6 +43,7 @@ No further configuration is needed for most plugins.
 
 - Claude Code CLI (latest)
 - Plugin-specific requirements are listed in each plugin's own README
+- `crypt-sync` additionally needs its CLI on `PATH`: `npm install -g crypt-sync` (Node.js ≥ 16). The plugin is only the skill; the encryption engine is the npm package
 
 ---
 
@@ -62,6 +64,7 @@ claude plugin install github:sametbrr/look-again
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
 claude plugin install github:sametbrr/github-manager
+claude plugin install github:sametbrr/crypt-sync
 ```
 
 ---
@@ -77,6 +80,7 @@ Each plugin registers a skill that Claude Code picks up automatically after inst
 | project-radar | `/project-radar` or "radar çalıştır" |
 | prompt-architect | `/prompt-architect` or "prompt yaz", "refine my prompt" |
 | github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
+| crypt-sync | `/crypt-sync` or ".env şifrele", "secret sync", "encrypt my env files" |
 
 ---
 
@@ -96,6 +100,8 @@ plugin-name/
 
 `SKILL.md` is the entry point — it defines the skill name, description, and instructions Claude follows when the skill is invoked. `plugin.json` registers the plugin in the marketplace so it can be discovered and installed.
 
+Two plugins carry extra components: `github-manager` bundles several skills under `skills/` plus `agents/`, and `crypt-sync` uses `skills/crypt-sync/SKILL.md` plus a `hooks/` gate that blocks CLI calls when its npm package is not installed.
+
 ---
 
 ## Project Structure
@@ -107,6 +113,7 @@ skill-hub/
 ├── project-radar/        → GitHub trending radar
 ├── prompt-architect/     → expert prompt engineering
 ├── github-manager/       → GitHub account & repo management
+├── crypt-sync/           → encrypted secret sync (also an npm CLI)
 └── .claude-plugin/
     └── marketplace.json  → hub-level marketplace index
 ```
