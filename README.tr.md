@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, NotebookLM otomasyonu, proje keşfi, prompt mühendisliği ve GitHub hesap yönetimi.
+Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, proje keşfi, prompt mühendisliği ve GitHub hesap yönetimi.
 
 > 🇬🇧 For English see [README.md](README.md)
 
@@ -32,9 +32,8 @@ Ardından Claude Code içinden çağır:
 |---|---|
 | [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Kişisel LLM wiki yönetimi: kaynak alma, çapraz referans, sorgulama, lint |
 | [look-again](https://github.com/sametbrr/look-again) | Konuşma kontrol noktalarını markdown olarak kaydet ve tam bağlamla devam et |
-| [notebooklm](https://github.com/sametbrr/notebooklm) | Google NotebookLM'e tam programatik erişim: not defterleri, podcast, quiz ve daha fazlası |
 | [project-radar](https://github.com/sametbrr/project-radar) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
-| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği 8 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği modele duyarlı, 11 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
 | [github-manager](https://github.com/sametbrr/github-manager) | Bir GitHub hesabını uçtan uca denetle ve düzelt: profil alanları, profil README, repo açıklamaları, topics ve proje README'leri (readme-standard'ı içerir) |
 
 ---
@@ -60,7 +59,6 @@ claude plugin install llm-wiki-manager@sametbrr/skill-hub
 ```bash
 claude plugin install github:sametbrr/llm-wiki-manager
 claude plugin install github:sametbrr/look-again
-claude plugin install github:sametbrr/notebooklm
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
 claude plugin install github:sametbrr/github-manager
@@ -76,7 +74,6 @@ Her eklenti, kurulumun ardından Claude Code tarafından otomatik olarak algıla
 |---|---|
 | llm-wiki-manager | `/llm-wiki-manager` veya "second brain", "wiki", "Memex" |
 | look-again | `/look-again` |
-| notebooklm | `/notebooklm` veya "X hakkında podcast oluştur" |
 | project-radar | `/project-radar` veya "radar çalıştır" |
 | prompt-architect | `/prompt-architect` veya "prompt yaz", "refine my prompt" |
 | github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
@@ -107,7 +104,6 @@ eklenti-adı/
 skill-hub/
 ├── llm-wiki-manager/     → kişisel wiki yönetimi
 ├── look-again/           → konuşma kontrol noktaları
-├── notebooklm/           → Google NotebookLM otomasyonu
 ├── project-radar/        → GitHub trend radarı
 ├── prompt-architect/     → uzman prompt mühendisliği
 ├── github-manager/       → GitHub hesap & repo yönetimi

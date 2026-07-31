@@ -2,7 +2,7 @@
 
 # skill-hub
 
-Claude Code skill collection — wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and GitHub account management.
+Claude Code skill collection — wiki management, conversation checkpoints, project discovery, prompt engineering and GitHub account management.
 
 > 🇹🇷 Türkçe için [README.tr.md](README.tr.md)
 
@@ -32,9 +32,8 @@ No further configuration is needed for most plugins.
 |---|---|
 | [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, lint |
 | [look-again](https://github.com/sametbrr/look-again) | Save conversation checkpoints as markdown files and resume with full context |
-| [notebooklm](https://github.com/sametbrr/notebooklm) | Full programmatic access to Google NotebookLM: notebooks, podcasts, quizzes and more |
 | [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
-| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware expert prompt with an 8-gate review |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware, model-aware expert prompt with an 11-gate review |
 | [github-manager](https://github.com/sametbrr/github-manager) | Audit and fix a GitHub account end-to-end: profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard) |
 
 ---
@@ -60,7 +59,6 @@ claude plugin install llm-wiki-manager@sametbrr/skill-hub
 ```bash
 claude plugin install github:sametbrr/llm-wiki-manager
 claude plugin install github:sametbrr/look-again
-claude plugin install github:sametbrr/notebooklm
 claude plugin install github:sametbrr/project-radar
 claude plugin install github:sametbrr/prompt-architect
 claude plugin install github:sametbrr/github-manager
@@ -76,7 +74,6 @@ Each plugin registers a skill that Claude Code picks up automatically after inst
 |---|---|
 | llm-wiki-manager | `/llm-wiki-manager` or mention "second brain", "wiki", "Memex" |
 | look-again | `/look-again` |
-| notebooklm | `/notebooklm` or "create a podcast about X" |
 | project-radar | `/project-radar` or "radar çalıştır" |
 | prompt-architect | `/prompt-architect` or "prompt yaz", "refine my prompt" |
 | github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
@@ -107,7 +104,6 @@ plugin-name/
 skill-hub/
 ├── llm-wiki-manager/     → personal wiki management
 ├── look-again/           → conversation checkpoints
-├── notebooklm/           → Google NotebookLM automation
 ├── project-radar/        → GitHub trending radar
 ├── prompt-architect/     → expert prompt engineering
 ├── github-manager/       → GitHub account & repo management

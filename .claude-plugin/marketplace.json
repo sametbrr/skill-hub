@@ -2,7 +2,7 @@
   "name": "skill-hub",
   "owner": { "name": "sametbrr", "email": "sametbrr@gmail.com" },
   "metadata": {
-    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, NotebookLM automation, project discovery, prompt engineering and GitHub account management"
+    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, project discovery, prompt engineering and GitHub account management"
   },
   "plugins": [
     {
@@ -16,11 +16,6 @@
       "description": "Save conversation checkpoints as markdown files and resume them later with full context"
     },
     {
-      "name": "notebooklm",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/notebooklm.git" },
-      "description": "Full programmatic access to Google NotebookLM: notebooks, sources, podcasts, videos, quizzes, flashcards and more"
-    },
-    {
       "name": "project-radar",
       "source": { "source": "url", "url": "https://github.com/sametbrr/project-radar.git" },
       "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist"
@@ -28,7 +23,7 @@
     {
       "name": "prompt-architect",
       "source": { "source": "url", "url": "https://github.com/sametbrr/prompt-architect.git" },
-      "description": "Turns any rough request into a structured, domain-aware expert prompt with an 8-gate quality review"
+      "description": "Turns any rough request into a structured, domain-aware, model-aware expert prompt with an 11-gate quality review"
     },
     {
       "name": "github-manager",
