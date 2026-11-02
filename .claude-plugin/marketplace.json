@@ -14,10 +14,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/llm-wiki-manager.git",
-        "ref": "v1.5.0"
+        "ref": "v1.5.1"
       },
       "description": "Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, and lint your markdown knowledge base",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "category": "knowledge",
       "keywords": [
         "wiki",
@@ -36,10 +36,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/look-again.git",
-        "ref": "v1.2.0"
+        "ref": "v1.2.1"
       },
       "description": "Save conversation checkpoints as markdown files and resume them later with full context — shared between Claude Code and Codex",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "category": "productivity",
       "keywords": [
         "checkpoint",
@@ -79,10 +79,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/prompt-architect.git",
-        "ref": "v4.0.0"
+        "ref": "v4.0.1"
       },
       "description": "Turns any rough request into a structured, domain-aware expert prompt tuned to the detected Claude or OpenAI/Codex model, with a 12-gate quality review",
-      "version": "4.0.0",
+      "version": "4.0.1",
       "category": "productivity",
       "keywords": [
         "prompting",
@@ -101,10 +101,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/github-manager.git",
-        "ref": "v1.0.1"
+        "ref": "v1.0.2"
       },
       "description": "Audit and strengthen any GitHub account — profile, profile README, repo descriptions, topics, READMEs and release workflows (bundles readme-standard)",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "development",
       "keywords": [
         "github",
