@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/agentskills.io-compatible-blue)](https://agentskills.io)
 
+[Quick Start](#quick-start) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [How It Works](#how-it-works) • [Contributing](#contributing)
+
 # skill-hub
 
 Plugin marketplace for Claude Code and OpenAI Codex: wiki management, conversation checkpoints, project discovery, model-aware prompt engineering, GitHub account tooling and encrypted secret sync.
@@ -44,7 +46,7 @@ Every plugin entry is pinned to a release tag, so installs and updates only pick
 
 - Claude Code or OpenAI Codex CLI (latest)
 - Plugin-specific requirements are listed in each plugin's own README
-- `crypt-sync` also needs its CLI on `PATH`: `npm install -g crypt-sync` (Node.js ≥ 18). The plugin is the agent layer; the encryption engine is the npm package
+- `crypt-sync` also needs its CLI on `PATH`: `npm install -g crypt-sync` (Node.js 22 or later, LTS). The plugin is the agent layer; the encryption engine is the npm package
 
 ---
 
@@ -118,6 +120,15 @@ skill-hub/
 ```
 
 For local development the plugin repositories can be cloned next to the catalog (`skill-hub/<plugin>/`); they are git-ignored here.
+
+---
+
+## Contributing
+
+- Questions and ideas: [Discussions](https://github.com/sametbrr/skill-hub/discussions)
+- Bugs: [issue tracker](https://github.com/sametbrr/skill-hub/issues)
+- Pull requests: read the [contribution guide](https://github.com/sametbrr/.github/blob/main/CONTRIBUTING.md) first
+- Security reports: follow the [security policy](https://github.com/sametbrr/skill-hub/security/policy), not a public issue
 
 ---
 

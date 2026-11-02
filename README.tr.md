@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/agentskills.io-compatible-blue)](https://agentskills.io)
 
+[Hızlı Başlangıç](#hızlı-başlangıç) • [Özellikler](#özellikler) • [Kurulum](#kurulum) • [Kullanım](#kullanım) • [Nasıl Çalışır](#nasıl-çalışır) • [Katkıda Bulunma](#katkıda-bulunma)
+
 # skill-hub
 
 Claude Code ve OpenAI Codex için plugin marketplace'i: wiki yönetimi, konuşma checkpoint'leri, proje keşfi, modele duyarlı prompt mühendisliği, GitHub hesap araçları ve şifreli secret senkronizasyonu.
@@ -44,7 +46,7 @@ Her plugin girdisi bir release tag'ine sabitlenmiştir; kurulum ve güncellemele
 
 - Claude Code ya da OpenAI Codex CLI (güncel)
 - Plugin'e özel gereksinimler her plugin'in kendi README'sinde
-- `crypt-sync` ayrıca CLI'nin `PATH`'te olmasını ister: `npm install -g crypt-sync` (Node.js ≥ 18). Plugin ajan katmanıdır; şifreleme motoru npm paketidir
+- `crypt-sync` ayrıca CLI'nin `PATH`'te olmasını ister: `npm install -g crypt-sync` (Node.js 22 veya üzeri, LTS). Plugin ajan katmanıdır; şifreleme motoru npm paketidir
 
 ---
 
@@ -69,7 +71,7 @@ codex plugin marketplace upgrade skill-hub        # yeni sürümleri al
 **Diğer Agent Skills istemcileri** (Copilot, Cursor, Gemini CLI, …)
 
 ```bash
-gh skill install sametbrr/<plugin> --agent <agent-adı>
+gh skill install sametbrr/<plugin> --agent <agent-name>
 ```
 
 ---
@@ -94,7 +96,7 @@ Skill'ler doğal dille tetiklenir. İsterseniz açıkça da seçebilirsiniz (Cla
 Her plugin kendi semver tag'leri olan ayrı bir GitHub reposudur ve iki ortamda da çalışır:
 
 ```
-plugin-adı/
+plugin-name/
 ├── .claude-plugin/plugin.json   → Claude Code manifesti
 ├── .codex-plugin/plugin.json    → Codex manifesti (aynı ad ve sürüm)
 ├── skills/<skill>/SKILL.md      → her skill için bir klasör; references/, scripts/, assets/ ile
@@ -118,6 +120,15 @@ skill-hub/
 ```
 
 Yerel geliştirme için plugin repoları katalogun yanına klonlanabilir (`skill-hub/<plugin>/`); burada git tarafından yok sayılırlar.
+
+---
+
+## Katkıda Bulunma
+
+- Sorular ve fikirler: [Discussions](https://github.com/sametbrr/skill-hub/discussions)
+- Hatalar: [issue takibi](https://github.com/sametbrr/skill-hub/issues)
+- Pull request'ler: önce [katkı rehberini](https://github.com/sametbrr/.github/blob/main/CONTRIBUTING.md) okuyun
+- Güvenlik bildirimleri: herkese açık issue yerine [güvenlik politikasını](https://github.com/sametbrr/skill-hub/security/policy) izleyin
 
 ---
 
