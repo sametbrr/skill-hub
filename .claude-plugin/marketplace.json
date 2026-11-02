@@ -1,39 +1,145 @@
 {
   "name": "skill-hub",
-  "owner": { "name": "sametbrr", "email": "sametbrr@gmail.com" },
+  "owner": {
+    "name": "sametbrr",
+    "email": "sametbrr@gmail.com",
+    "url": "https://github.com/sametbrr"
+  },
   "metadata": {
-    "description": "sametbrr's Claude Code skill collection: wiki management, conversation checkpoints, project discovery, prompt engineering, GitHub account management and encrypted secret sync"
+    "description": "sametbrr's agent plugins for Claude Code and Codex: LLM wiki, conversation checkpoints, project radar, model-aware prompt engineering, GitHub account tooling and encrypted secret sync"
   },
   "plugins": [
     {
       "name": "llm-wiki-manager",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/llm-wiki-manager.git" },
-      "description": "Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, and lint your markdown knowledge base"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/llm-wiki-manager.git",
+        "ref": "v1.5.0"
+      },
+      "description": "Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, and lint your markdown knowledge base",
+      "version": "1.5.0",
+      "category": "knowledge",
+      "keywords": [
+        "wiki",
+        "second-brain",
+        "knowledge-management",
+        "obsidian"
+      ],
+      "homepage": "https://github.com/sametbrr/llm-wiki-manager",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     },
     {
       "name": "look-again",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/look-again.git" },
-      "description": "Save conversation checkpoints as markdown files and resume them later with full context"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/look-again.git",
+        "ref": "v1.2.0"
+      },
+      "description": "Save conversation checkpoints as markdown files and resume them later with full context — shared between Claude Code and Codex",
+      "version": "1.2.0",
+      "category": "productivity",
+      "keywords": [
+        "checkpoint",
+        "context",
+        "resume"
+      ],
+      "homepage": "https://github.com/sametbrr/look-again",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     },
     {
       "name": "project-radar",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/project-radar.git" },
-      "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/project-radar.git",
+        "ref": "main",
+        "sha": "a8544d470156098195b89ca6e1176fd52128c21a"
+      },
+      "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist (Claude Code)",
+      "version": "1.1.1",
+      "category": "productivity",
+      "keywords": [
+        "trending",
+        "github",
+        "discovery",
+        "report"
+      ],
+      "homepage": "https://github.com/sametbrr/project-radar",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     },
     {
       "name": "prompt-architect",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/prompt-architect.git" },
-      "description": "Turns any rough request into a structured, domain-aware, model-aware expert prompt with an 11-gate quality review"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/prompt-architect.git",
+        "ref": "v4.0.0"
+      },
+      "description": "Turns any rough request into a structured, domain-aware expert prompt tuned to the detected Claude or OpenAI/Codex model, with a 12-gate quality review",
+      "version": "4.0.0",
+      "category": "productivity",
+      "keywords": [
+        "prompting",
+        "prompt-engineering",
+        "claude",
+        "openai"
+      ],
+      "homepage": "https://github.com/sametbrr/prompt-architect",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     },
     {
       "name": "github-manager",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/github-manager.git" },
-      "description": "Audit and fix a GitHub account end-to-end — profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard)"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/github-manager.git",
+        "ref": "v1.0.0"
+      },
+      "description": "Audit and strengthen any GitHub account — profile, profile README, repo descriptions, topics, READMEs and release workflows (bundles readme-standard)",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": [
+        "github",
+        "readme",
+        "repository-metadata",
+        "release"
+      ],
+      "homepage": "https://github.com/sametbrr/github-manager",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     },
     {
       "name": "crypt-sync",
-      "source": { "source": "url", "url": "https://github.com/sametbrr/crypt-sync.git" },
-      "description": "Keep .env and secret files encrypted in git, synced across machines via age — requires the crypt-sync CLI (npm install -g crypt-sync)"
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sametbrr/crypt-sync.git",
+        "ref": "v1.0.5"
+      },
+      "description": "Keep .env and secret files encrypted in git, synced across machines via age — requires the crypt-sync CLI (npm install -g crypt-sync)",
+      "version": "1.0.5",
+      "category": "security",
+      "keywords": [
+        "secrets",
+        "dotenv",
+        "encryption",
+        "age"
+      ],
+      "homepage": "https://github.com/sametbrr/crypt-sync",
+      "author": {
+        "name": "sametbrr",
+        "url": "https://github.com/sametbrr"
+      }
     }
   ]
 }

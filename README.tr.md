@@ -1,8 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/agentskills.io-compatible-blue)](https://agentskills.io)
 
 # skill-hub
 
-Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, proje keşfi, prompt mühendisliği, GitHub hesap yönetimi ve şifreli secret senkronu.
+Claude Code ve OpenAI Codex için plugin marketplace'i: wiki yönetimi, konuşma checkpoint'leri, proje keşfi, modele duyarlı prompt mühendisliği, GitHub hesap araçları ve şifreli secret senkronizasyonu.
 
 > 🇬🇧 For English see [README.md](README.md)
 
@@ -10,97 +11,99 @@ Claude Code skill koleksiyonu — wiki yönetimi, konuşma kontrol noktaları, p
 
 ## Hızlı Başlangıç
 
-Herhangi bir eklentiyi doğrudan GitHub deposundan yükle:
-
 ```bash
-claude plugin install github:sametbrr/llm-wiki-manager
+# Claude Code
+claude plugin marketplace add sametbrr/skill-hub
+claude plugin install llm-wiki-manager@skill-hub
+
+# Codex
+codex plugin marketplace add sametbrr/skill-hub
+codex plugin add llm-wiki-manager@skill-hub
 ```
 
-Ardından Claude Code içinden çağır:
-
-```
-/llm-wiki-manager bootstrap
-```
-
-Çoğu eklenti için ek yapılandırma gerekmez.
+Sonra doğal dille isteyin, örn. *"burada bir LLM wiki kur"*. Çoğu plugin başka ayar gerektirmez.
 
 ---
 
 ## Özellikler
 
-| Eklenti | Ne yapar |
-|---|---|
-| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Kişisel LLM wiki yönetimi: kaynak alma, çapraz referans, sorgulama, lint |
-| [look-again](https://github.com/sametbrr/look-again) | Konuşma kontrol noktalarını markdown olarak kaydet ve tam bağlamla devam et |
-| [project-radar](https://github.com/sametbrr/project-radar) | Günlük Türkçe HTML radar raporu: trend GitHub projeleri ve kalıcı takip listesi |
-| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Her ham isteği modele duyarlı, 11 kapılı incelemeyle yapılandırılmış uzman promptuna dönüştür |
-| [github-manager](https://github.com/sametbrr/github-manager) | Bir GitHub hesabını uçtan uca denetle ve düzelt: profil alanları, profil README, repo açıklamaları, topics ve proje README'leri (readme-standard'ı içerir) |
-| [crypt-sync](https://github.com/sametbrr/crypt-sync) | `.env` ve gizli dosyaları age ile şifreli tut, git üzerinden makineler arası senkronize et — **`npm install -g crypt-sync` gerekir** |
+| Plugin | Ne yapar | Claude Code | Codex |
+|---|---|:---:|:---:|
+| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | LLM'in yönettiği kişisel wiki: kaynak ekleme, sayfalar arası referans, kaynaklı sorgu, lint | ✓ | ✓ |
+| [look-again](https://github.com/sametbrr/look-again) | Konuşma checkpoint'lerini markdown olarak kaydeder, tam bağlamla devam ettirir; iki ajan aynı klasörü kullanır | ✓ | ✓ |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Kaba bir isteği, tespit edilen Claude ya da OpenAI/Codex modeline göre ayarlanmış uzman prompt'a çevirir; 12 kapılı inceleme | ✓ | ✓ |
+| [github-manager](https://github.com/sametbrr/github-manager) | Herhangi bir GitHub hesabını denetler ve güçlendirir: profil, profil README'si, açıklamalar, topic'ler, README'ler, release workflow'ları (readme-standard dahil) | ✓ | ✓ |
+| [crypt-sync](https://github.com/sametbrr/crypt-sync) | `.env` ve secret dosyalarını git'te age ile şifreli tutar, makineler arası senkronlar — **`npm install -g crypt-sync` gerekir** | ✓ | ✓ |
+| [project-radar](https://github.com/sametbrr/project-radar) | GitHub trend projelerinin günlük Türkçe HTML radar raporu ve kalıcı izleme listesi | ✓ | — |
+
+Her plugin girdisi bir release tag'ine sabitlenmiştir; kurulum ve güncellemeler yalnızca yayınlanmış sürümleri alır.
 
 ---
 
 ## Gereksinimler
 
-- Claude Code CLI (en güncel sürüm)
-- Eklentiye özgü gereksinimler her eklentinin kendi README dosyasında listelenir
-- `crypt-sync` ek olarak CLI'sinin `PATH`'te olmasını ister: `npm install -g crypt-sync` (Node.js ≥ 16). Eklenti yalnızca skill; şifreleme motoru npm paketidir
+- Claude Code ya da OpenAI Codex CLI (güncel)
+- Plugin'e özel gereksinimler her plugin'in kendi README'sinde
+- `crypt-sync` ayrıca CLI'nin `PATH`'te olmasını ister: `npm install -g crypt-sync` (Node.js ≥ 18). Plugin ajan katmanıdır; şifreleme motoru npm paketidir
 
 ---
 
 ## Kurulum
 
-**Seçenek 1 — Marketplace (önerilen):** Hub'ı bir kez kaydet, ardından istediğin eklentiyi adıyla yükle.
+**Claude Code**
 
 ```bash
 claude plugin marketplace add sametbrr/skill-hub
-claude plugin install llm-wiki-manager@sametbrr/skill-hub
+claude plugin install <plugin>@skill-hub          # örn. prompt-architect@skill-hub
+claude plugin marketplace update skill-hub        # yeni sürümleri al
 ```
 
-**Seçenek 2 — Tek tek kurulum:** Her eklentiyi doğrudan kendi deposundan yükle.
+**Codex**
 
 ```bash
-claude plugin install github:sametbrr/llm-wiki-manager
-claude plugin install github:sametbrr/look-again
-claude plugin install github:sametbrr/project-radar
-claude plugin install github:sametbrr/prompt-architect
-claude plugin install github:sametbrr/github-manager
-claude plugin install github:sametbrr/crypt-sync
+codex plugin marketplace add sametbrr/skill-hub
+codex plugin add <plugin>@skill-hub
+codex plugin marketplace upgrade skill-hub        # yeni sürümleri al
+```
+
+**Diğer Agent Skills istemcileri** (Copilot, Cursor, Gemini CLI, …)
+
+```bash
+gh skill install sametbrr/<plugin> --agent <agent-adı>
 ```
 
 ---
 
 ## Kullanım
 
-Her eklenti, kurulumun ardından Claude Code tarafından otomatik olarak algılanan bir skill kaydeder. Tam kullanım ve yapılandırma için ilgili eklentinin README dosyasına bakın.
+Skill'ler doğal dille tetiklenir. İsterseniz açıkça da seçebilirsiniz (Claude Code'da `/plugin:skill`, Codex'te skill seçici ya da skill anma). Ayrıntılı kullanım her plugin'in README'sinde.
 
-| Eklenti | Tetikleyici |
+| Plugin | Örnek tetikleyiciler |
 |---|---|
-| llm-wiki-manager | `/llm-wiki-manager` veya "second brain", "wiki", "Memex" |
-| look-again | `/look-again` |
-| project-radar | `/project-radar` veya "radar çalıştır" |
-| prompt-architect | `/prompt-architect` veya "prompt yaz", "refine my prompt" |
-| github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
-| crypt-sync | `/crypt-sync` veya ".env şifrele", "secret sync", "secretları git'e şifreli koy" |
+| llm-wiki-manager | "second brain", "bunu wiki'me ekle", "wiki'yi kontrol et" |
+| look-again | "look again", "look again list", "kaldığımız yerden devam et" |
+| prompt-architect | "prompt yaz", "refine my prompt", "bunu Opus 5.5 / GPT-6.1 için yaz" |
+| github-manager | `gh-onboard`, `gh-audit`, `gh-normalize`, `profile-bio`, `profile-readme`, `readme-standard`, `release-workflow` |
+| crypt-sync | ".env şifrele", "secret sync", "encrypt my env files" |
+| project-radar | "radar çalıştır", "github trending raporu" |
 
 ---
 
 ## Nasıl Çalışır
 
-Bu hub'daki her eklenti aynı yapıyı izler:
+Her plugin kendi semver tag'leri olan ayrı bir GitHub reposudur ve iki ortamda da çalışır:
 
 ```
-eklenti-adı/
-├── SKILL.md              → Claude Code'un yüklediği skill tanımı
-├── .claude-plugin/
-│   └── plugin.json       → marketplace metadata
-├── assets/               → şablonlar ve statik kaynaklar
-├── references/           → çalışma zamanında okunan referans belgeler
-└── scripts/              → yardımcı betikler (gerektiğinde Python)
+plugin-adı/
+├── .claude-plugin/plugin.json   → Claude Code manifesti
+├── .codex-plugin/plugin.json    → Codex manifesti (aynı ad ve sürüm)
+├── skills/<skill>/SKILL.md      → her skill için bir klasör; references/, scripts/, assets/ ile
+├── agents/, hooks/              → isteğe bağlı Claude Code alt ajanları ve hook'ları
+├── AGENTS.md                    → repoda çalışan her ajan için rehber (CLAUDE.md bunu içe aktarır)
+└── README.md / README.tr.md
 ```
 
-`SKILL.md` giriş noktasıdır — skill adını, açıklamasını ve Claude'un skill çağrıldığında izlediği talimatları tanımlar. `plugin.json` eklentiyi marketplace'e kaydeder.
-
-İki eklenti ek bileşen taşır: `github-manager` birden fazla skill'i `skills/` altında ve ayrıca `agents/` dizinini içerir; `crypt-sync` ise `skills/crypt-sync/SKILL.md` yanında bir `hooks/` kapısı kullanır — npm paketi kurulu değilken CLI çağrılarını bloklar.
+Bu repo yalnızca `.claude-plugin/marketplace.json` dosyasını tutar; Claude Code ve Codex ikisi de bu dosyayı okur. Her girdi bir plugin reposunu bir release tag'inde gösterir.
 
 ---
 
@@ -108,17 +111,13 @@ eklenti-adı/
 
 ```
 skill-hub/
-├── llm-wiki-manager/     → kişisel wiki yönetimi
-├── look-again/           → konuşma kontrol noktaları
-├── project-radar/        → GitHub trend radarı
-├── prompt-architect/     → uzman prompt mühendisliği
-├── github-manager/       → GitHub hesap & repo yönetimi
-├── crypt-sync/           → şifreli secret senkronu (aynı zamanda npm CLI)
-└── .claude-plugin/
-    └── marketplace.json  → hub düzeyinde marketplace indeksi
+├── .claude-plugin/
+│   └── marketplace.json   → Claude Code ve Codex'in okuduğu katalog
+├── README.md / README.tr.md
+└── LICENSE
 ```
 
-Her alt dizin aynı zamanda bağımsız bir git deposudur ve tek başına kullanılabilir.
+Yerel geliştirme için plugin repoları katalogun yanına klonlanabilir (`skill-hub/<plugin>/`); burada git tarafından yok sayılırlar.
 
 ---
 

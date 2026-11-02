@@ -1,8 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/agentskills.io-compatible-blue)](https://agentskills.io)
 
 # skill-hub
 
-Claude Code skill collection — wiki management, conversation checkpoints, project discovery, prompt engineering, GitHub account management and encrypted secret sync.
+Plugin marketplace for Claude Code and OpenAI Codex: wiki management, conversation checkpoints, project discovery, model-aware prompt engineering, GitHub account tooling and encrypted secret sync.
 
 > 🇹🇷 Türkçe için [README.tr.md](README.tr.md)
 
@@ -10,97 +11,99 @@ Claude Code skill collection — wiki management, conversation checkpoints, proj
 
 ## Quick Start
 
-Install any plugin directly from its GitHub repository:
-
 ```bash
-claude plugin install github:sametbrr/llm-wiki-manager
+# Claude Code
+claude plugin marketplace add sametbrr/skill-hub
+claude plugin install llm-wiki-manager@skill-hub
+
+# Codex
+codex plugin marketplace add sametbrr/skill-hub
+codex plugin add llm-wiki-manager@skill-hub
 ```
 
-Then invoke it in Claude Code:
-
-```
-/llm-wiki-manager bootstrap
-```
-
-No further configuration is needed for most plugins.
+Then ask in natural language, e.g. *"set up an LLM wiki here"*. No further configuration is needed for most plugins.
 
 ---
 
 ## Features
 
-| Plugin | What it does |
-|---|---|
-| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, lint |
-| [look-again](https://github.com/sametbrr/look-again) | Save conversation checkpoints as markdown files and resume with full context |
-| [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist |
-| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn any rough request into a structured, domain-aware, model-aware expert prompt with an 11-gate review |
-| [github-manager](https://github.com/sametbrr/github-manager) | Audit and fix a GitHub account end-to-end: profile fields, profile README, repo descriptions, topics and project READMEs (bundles readme-standard) |
-| [crypt-sync](https://github.com/sametbrr/crypt-sync) | Keep `.env` and secret files encrypted in git, synced across machines via age — **needs `npm install -g crypt-sync`** |
+| Plugin | What it does | Claude Code | Codex |
+|---|---|:---:|:---:|
+| [llm-wiki-manager](https://github.com/sametbrr/llm-wiki-manager) | Personal LLM-managed wiki: ingest sources, cross-reference pages, query with citations, lint | ✓ | ✓ |
+| [look-again](https://github.com/sametbrr/look-again) | Save conversation checkpoints as markdown and resume with full context; one folder shared by both agents | ✓ | ✓ |
+| [prompt-architect](https://github.com/sametbrr/prompt-architect) | Turn a rough request into an expert prompt tuned to the detected Claude or OpenAI/Codex model, with a 12-gate review | ✓ | ✓ |
+| [github-manager](https://github.com/sametbrr/github-manager) | Audit and strengthen any GitHub account: profile, profile README, descriptions, topics, READMEs, release workflows (bundles readme-standard) | ✓ | ✓ |
+| [crypt-sync](https://github.com/sametbrr/crypt-sync) | Keep `.env` and secret files encrypted in git, synced across machines via age — **needs `npm install -g crypt-sync`** | ✓ | ✓ |
+| [project-radar](https://github.com/sametbrr/project-radar) | Daily Turkish HTML radar report of trending GitHub projects with a persistent watchlist | ✓ | — |
+
+Every plugin entry is pinned to a release tag, so installs and updates only pick up released versions.
 
 ---
 
 ## Requirements
 
-- Claude Code CLI (latest)
+- Claude Code or OpenAI Codex CLI (latest)
 - Plugin-specific requirements are listed in each plugin's own README
-- `crypt-sync` additionally needs its CLI on `PATH`: `npm install -g crypt-sync` (Node.js ≥ 16). The plugin is only the skill; the encryption engine is the npm package
+- `crypt-sync` also needs its CLI on `PATH`: `npm install -g crypt-sync` (Node.js ≥ 18). The plugin is the agent layer; the encryption engine is the npm package
 
 ---
 
 ## Installation
 
-**Option 1 — Marketplace (recommended):** Register the hub once, then install any plugin by name.
+**Claude Code**
 
 ```bash
 claude plugin marketplace add sametbrr/skill-hub
-claude plugin install llm-wiki-manager@sametbrr/skill-hub
+claude plugin install <plugin>@skill-hub          # e.g. prompt-architect@skill-hub
+claude plugin marketplace update skill-hub        # pick up new releases
 ```
 
-**Option 2 — Individual install:** Install any plugin directly from its own repository.
+**Codex**
 
 ```bash
-claude plugin install github:sametbrr/llm-wiki-manager
-claude plugin install github:sametbrr/look-again
-claude plugin install github:sametbrr/project-radar
-claude plugin install github:sametbrr/prompt-architect
-claude plugin install github:sametbrr/github-manager
-claude plugin install github:sametbrr/crypt-sync
+codex plugin marketplace add sametbrr/skill-hub
+codex plugin add <plugin>@skill-hub
+codex plugin marketplace upgrade skill-hub        # pick up new releases
+```
+
+**Any other Agent Skills client** (Copilot, Cursor, Gemini CLI, …)
+
+```bash
+gh skill install sametbrr/<plugin> --agent <agent-name>
 ```
 
 ---
 
 ## Usage
 
-Each plugin registers a skill that Claude Code picks up automatically after installation. Refer to the individual plugin README for full usage and configuration.
+Skills trigger from natural language. You can also pick one explicitly (`/plugin:skill` in Claude Code, the skill picker or a skill mention in Codex). Each plugin's README covers full usage.
 
-| Plugin | Trigger |
+| Plugin | Example triggers |
 |---|---|
-| llm-wiki-manager | `/llm-wiki-manager` or mention "second brain", "wiki", "Memex" |
-| look-again | `/look-again` |
-| project-radar | `/project-radar` or "radar çalıştır" |
-| prompt-architect | `/prompt-architect` or "prompt yaz", "refine my prompt" |
-| github-manager | `/gh-onboard`, `/gh-audit`, `/gh-normalize`, `/profile-bio`, `/profile-readme`, `/readme-standard` |
-| crypt-sync | `/crypt-sync` or ".env şifrele", "secret sync", "encrypt my env files" |
+| llm-wiki-manager | "second brain", "add this to my wiki", "health check the wiki" |
+| look-again | "look again", "look again list", "continue where we left off" |
+| prompt-architect | "prompt yaz", "refine my prompt", "write this for Opus 5.5 / GPT-6.1" |
+| github-manager | `gh-onboard`, `gh-audit`, `gh-normalize`, `profile-bio`, `profile-readme`, `readme-standard`, `release-workflow` |
+| crypt-sync | ".env şifrele", "secret sync", "encrypt my env files" |
+| project-radar | "radar çalıştır", "github trending raporu" |
 
 ---
 
 ## How It Works
 
-Each plugin in this hub follows the same structure:
+Each plugin is its own GitHub repository with its own semver tags, and works in both hosts:
 
 ```
 plugin-name/
-├── SKILL.md              → skill definition loaded by Claude Code
-├── .claude-plugin/
-│   └── plugin.json       → marketplace metadata
-├── assets/               → templates and static resources
-├── references/           → reference docs read at runtime
-└── scripts/              → helper scripts (Python, where needed)
+├── .claude-plugin/plugin.json   → Claude Code manifest
+├── .codex-plugin/plugin.json    → Codex manifest (same name and version)
+├── skills/<skill>/SKILL.md      → one folder per skill, with references/, scripts/, assets/
+├── agents/, hooks/              → optional Claude Code subagents and hooks
+├── AGENTS.md                    → guide for any agent working on the repo (CLAUDE.md imports it)
+└── README.md / README.tr.md
 ```
 
-`SKILL.md` is the entry point — it defines the skill name, description, and instructions Claude follows when the skill is invoked. `plugin.json` registers the plugin in the marketplace so it can be discovered and installed.
-
-Two plugins carry extra components: `github-manager` bundles several skills under `skills/` plus `agents/`, and `crypt-sync` uses `skills/crypt-sync/SKILL.md` plus a `hooks/` gate that blocks CLI calls when its npm package is not installed.
+This repository holds only `.claude-plugin/marketplace.json`, which both Claude Code and Codex read. Each entry points to a plugin repository at a release tag.
 
 ---
 
@@ -108,17 +111,13 @@ Two plugins carry extra components: `github-manager` bundles several skills unde
 
 ```
 skill-hub/
-├── llm-wiki-manager/     → personal wiki management
-├── look-again/           → conversation checkpoints
-├── project-radar/        → GitHub trending radar
-├── prompt-architect/     → expert prompt engineering
-├── github-manager/       → GitHub account & repo management
-├── crypt-sync/           → encrypted secret sync (also an npm CLI)
-└── .claude-plugin/
-    └── marketplace.json  → hub-level marketplace index
+├── .claude-plugin/
+│   └── marketplace.json   → catalog read by Claude Code and Codex
+├── README.md / README.tr.md
+└── LICENSE
 ```
 
-Each subdirectory is also an independent git repository and can be used standalone.
+For local development the plugin repositories can be cloned next to the catalog (`skill-hub/<plugin>/`); they are git-ignored here.
 
 ---
 
