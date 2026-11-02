@@ -57,11 +57,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/project-radar.git",
-        "ref": "main",
-        "sha": "a8544d470156098195b89ca6e1176fd52128c21a"
+        "ref": "v1.1.2"
       },
       "description": "Daily Turkish HTML radar report of trending and talked-about projects, with a persistent watchlist (Claude Code)",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "category": "productivity",
       "keywords": [
         "trending",
