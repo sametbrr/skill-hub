@@ -123,10 +123,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/crypt-sync.git",
-        "ref": "v1.0.5"
+        "ref": "v1.0.6"
       },
       "description": "Keep .env and secret files encrypted in git, synced across machines via age — requires the crypt-sync CLI (npm install -g crypt-sync)",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "security",
       "keywords": [
         "secrets",
