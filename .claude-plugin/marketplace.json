@@ -102,10 +102,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sametbrr/github-manager.git",
-        "ref": "v1.0.0"
+        "ref": "v1.0.1"
       },
       "description": "Audit and strengthen any GitHub account — profile, profile README, repo descriptions, topics, READMEs and release workflows (bundles readme-standard)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "development",
       "keywords": [
         "github",
